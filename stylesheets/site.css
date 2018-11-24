@@ -128,7 +128,7 @@ table{
 body{
   text-align:left;
   font-family:'Open Sans', sans-serif;
-  font-weight:300;
+  font-weight:400;
   font-size:1em;
   color:#333333
 }
@@ -138,12 +138,18 @@ a{
 a:visited{
   color:#333333
 }
+hr {
+  width: 80%;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0 auto;
+}
 .main-nav{
   position:absolute;
   top:0;
   left:0;
   right:0;
-  background-color:rgba(255,255,255,0.92);
+  background-color:rgba(255,255,255,1);
   display:-webkit-box;
   display:-webkit-flex;
   display:-ms-flexbox;
@@ -219,16 +225,21 @@ a:visited{
   align-items:center
 }
 .hero .box{
-  background-color:rgba(0,0,0,0.25);
-  padding:2em 2em;
-  border:solid 1px white
+  background-color:rgba(0,0,0,0.5);
+  padding: 2em 2em;
+  border:solid 1px white;
+  max-width: 80vw;
 }
 .tagline{
   color:#fff;
-  font-size:3em;
-  font-weight:200;
+  font-size:1.8em;
+  font-weight:400;
   font-family:'Raleway', sans-serif;
-  text-shadow:0 0 10px #333
+  text-shadow:0 0 10px #333;
+  line-height: 1.3em;
+}
+.lead {
+  color: #fff;
 }
 .actions{
   display:-webkit-box;
@@ -247,7 +258,7 @@ a:visited{
   -webkit-box-align:center;
   -webkit-align-items:center;
   -ms-flex-align:center;
-  align-items:center
+  align-items:center;
 }
 .actions .button-link{
   background-color:#08910d;
@@ -255,8 +266,9 @@ a:visited{
   box-sizing:border-box;
   width:14em;
   padding:1em 0;
-  margin:0 1em 1em 1em;
+  margin: 1em;
   font-size:1.1em;
+  font-weight: 500;
   text-align:center;
   text-decoration:none;
   border:solid 0 #e3edf4;
@@ -266,12 +278,25 @@ a:visited{
 .actions .button-link:hover{
   background-color:#08910d;
 }
-.map-frame{
-  width:40vw;
-  height:40vh;
-  background-color:#f4f4f4
+.about-us {
+  margin: 3em 10vw;
 }
-.contact-us{
+.practitioner {
+  margin: 1em 0;
+}
+.locations {
+  margin: 3em 0;
+}
+.locations header {
+  margin: 1em 10vw;
+}
+.locations hr {
+  margin: 2em auto;
+}
+.about-us h2, .locations h2 {
+  color: #08910d;
+}
+.location{
   display:-webkit-box;
   display:-webkit-flex;
   display:-ms-flexbox;
@@ -289,19 +314,25 @@ a:visited{
   -webkit-align-items:center;
   -ms-flex-align:center;
   align-items:center;
-  padding:3em 0
 }
-.contact-us .map{
+.location .map{
   width:40vw;
-  height:40vh;
-  background-color:#f4f4f4
+  height:30vh;
+  background-color:#f4f4f4;
 }
-.contact-us .details{
+.location .details{
   box-sizing:border-box;
   width:40vw;
-  height:40vh;
+  height:30vh;
   padding:0 2em;
   line-height:1.5em
+}
+.social {
+  font-size: 1.8em;
+  margin-left: 20px;
+}
+.social a {
+  vertical-align: middle;
 }
 .site-footer{
   background-color:#fafafa;
@@ -321,28 +352,34 @@ a:visited{
   -webkit-justify-content:center;
   -ms-flex-pack:center;
   justify-content:center;
-  -webkit-box-align:stretch;
-  -webkit-align-items:stretch;
-  -ms-flex-align:stretch;
-  align-items:stretch
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
 }
 @media (min-width: 481px) and (max-width: 768px){
   .hero{
       height:70vh;
       min-height:500px
   }
+  .hero .box {
+    margin-top: 5em;
+  }
   .tagline{
       font-size:2.5em
   }
-  .contact-us{
-      padding:3em 0
+  .about-us {
+    margin: 2em 5vw;
   }
-  .contact-us .map{
+  .locations header {
+    margin: 1em 5vw;
+  }
+  .location .map{
       width:45vw;
       height:30vh;
       min-height:300px
   }
-  .contact-us .details{
+  .location .details{
       width:45vw;
       height:30vh;
       min-height:300px;
@@ -397,70 +434,82 @@ a:visited{
   .main-nav .menu{
       display:none
   }
-  .hero{
-      height:100vh;
-      padding:0 1em
+  .hero {
+    height:100vh;
+    padding:0 1em;
+  }
+  .hero .box {
+    margin-top: 5em;
+    padding: 1em 2em;
   }
   .tagline{
-      font-size:2em;
-      font-weight:300;
-      text-align:center
+    font-size:1.4em;
+    font-weight:300;
+    text-align:center
+  }
+  .lead {
+    margin: 0 1em;
   }
   .actions{
-      -webkit-box-orient:vertical;
-      -webkit-box-direction:normal;
-      -webkit-flex-direction:column;
-      -ms-flex-direction:column;
-      flex-direction:column
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
   }
   .actions .button-link{
-      font-weight:400
+    margin: 0.5em 1em;
+    padding: 0.8em 0;
   }
-  .contact-us{
-      -webkit-box-orient:vertical;
-      -webkit-box-direction:normal;
-      -webkit-flex-direction:column;
-      -ms-flex-direction:column;
-      flex-direction:column;
-      padding:1em 0
+  .about-us {
+    margin: 2em 5vw;
   }
-  .contact-us .map{
-      -webkit-box-ordinal-group:3;
-      -webkit-order:2;
-      -ms-flex-order:2;
-      order:2;
-      width:90vw;
-      height:300px
+  .locations header {
+    margin: 1em 5vw;
   }
-  .contact-us .details{
-      -webkit-box-ordinal-group:2;
-      -webkit-order:1;
-      -ms-flex-order:1;
-      order:1;
-      width:90vw;
-      height:auto;
-      margin-bottom:2em;
-      padding:0 0.7em;
-      font-size:0.9em
+  .location{
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
+  }
+  .location .map{
+    -webkit-box-ordinal-group:3;
+    -webkit-order:2;
+    -ms-flex-order:2;
+    order:2;
+    width:90vw;
+    height:300px
+  }
+  .location .details{
+    -webkit-box-ordinal-group:2;
+    -webkit-order:1;
+    -ms-flex-order:1;
+    order:1;
+    width:90vw;
+    height:auto;
+    padding: 0;
+    font-size:1em;
   }
   .brand{
-      font-size:1em;
-      font-weight:300;
-      width:45%;
-      margin:0;
-      text-align:right;
-      -webkit-align-self:center;
-      -ms-flex-item-align:center;
-      align-self:center
+    font-size:1em;
+    font-weight:300;
+    width:45%;
+    margin:0;
+    text-align:right;
+    -webkit-align-self:center;
+    -ms-flex-item-align:center;
+    align-self:center
   }
   .menu{
-      list-style-type:none;
-      width:45%;
-      margin:0;
-      padding:0;
-      -webkit-align-self:center;
-      -ms-flex-item-align:center;
-      align-self:center
+    list-style-type:none;
+    width:45%;
+    margin:0;
+    padding:0;
+    -webkit-align-self:center;
+    -ms-flex-item-align:center;
+    align-self:center
   }
   .site-footer{
       font-size:0.6em
